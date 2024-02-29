@@ -3,11 +3,7 @@ function checkForSpam(message) {
   let spamIndex = lowercaseMessage.indexOf('spam');
   let saleIndex = lowercaseMessage.indexOf('sale');
 
-  if (spamIndex === -1 && saleIndex === -1) {
-    return false;
-  } else {
-    return true;
-  }
+  return spamIndex !== -1 || saleIndex !== -1;
 }
 console.log(checkForSpam('Latest technology news')); // false
 console.log(checkForSpam('JavaScript weekly newsletter')); // false
